@@ -1,0 +1,61 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+// Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../lib/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+// @import "../lib/bootstrap/scss/variables";
+@import "helpers/variables"; // 客製的變數
+
+// 4. Include any default map overrides here
+$font-family-base: "Noto Sans TC", "微軟正黑體", sans-serif;
+
+// Create your own map
+$custom-colors: (
+  "custom-color": #900,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+// 5. Include remainder of required parts
+@import "../lib/bootstrap/scss/maps";
+@import "../lib/bootstrap/scss/mixins";
+@import "../lib/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../lib/bootstrap/scss/utilities";
+@import "../lib/bootstrap/scss/reboot";
+@import "../lib/bootstrap/scss/type";
+@import "../lib/bootstrap/scss/images";
+@import "../lib/bootstrap/scss/containers";
+@import "../lib/bootstrap/scss/grid";
+@import "../lib/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../lib/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+// 基本設置(Base)全域套用的預設樣式
+@import "base/base";
+
+// 佔用區塊(Placeholder)編譯後不輸出任何 CSS 檔案的 Sass 輔助工具
+@import "helpers/flex-element";
+
+// 結構(Layout)每一頁都需使用到的大型元件
+@import "layout/header";
+@import "layout/footer";
+
+// 組件(Component)可重複使用的元件
+@import "components/block-items";
+
+// 頁面(Pages) 每一個網頁特定且零碎的樣式
+@import "pages/home";
+
+// 待分類的樣式
+@import "shame";
