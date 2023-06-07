@@ -1,0 +1,10 @@
+.navbar-brand {
+  img {
+    height: 24px;
+  }
+  @include media-breakpoint-up(xl) {
+    img {
+      height: 40px;
+    }
+  }
+}

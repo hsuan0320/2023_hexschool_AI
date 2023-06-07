@@ -34,7 +34,51 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "../lib/bootstrap/scss/images";
 @import "../lib/bootstrap/scss/containers";
 @import "../lib/bootstrap/scss/grid";
+@import "../lib/bootstrap/scss/tables";
+@import "../lib/bootstrap/scss/forms";
+@import "../lib/bootstrap/scss/buttons";
+@import "../lib/bootstrap/scss/transitions";
+@import "../lib/bootstrap/scss/dropdown";
+@import "../lib/bootstrap/scss/button-group";
+@import "../lib/bootstrap/scss/nav";
+@import "../lib/bootstrap/scss/navbar";
+@import "../lib/bootstrap/scss/card";
+@import "../lib/bootstrap/scss/accordion";
+@import "../lib/bootstrap/scss/breadcrumb";
+@import "../lib/bootstrap/scss/pagination";
+@import "../lib/bootstrap/scss/badge";
+@import "../lib/bootstrap/scss/alert";
+@import "../lib/bootstrap/scss/progress";
+@import "../lib/bootstrap/scss/list-group";
+@import "../lib/bootstrap/scss/close";
+@import "../lib/bootstrap/scss/toasts";
+@import "../lib/bootstrap/scss/modal";
+@import "../lib/bootstrap/scss/tooltip";
+@import "../lib/bootstrap/scss/popover";
+@import "../lib/bootstrap/scss/carousel";
+@import "../lib/bootstrap/scss/spinners";
+@import "../lib/bootstrap/scss/offcanvas";
+@import "../lib/bootstrap/scss/placeholders";
+
+// Helpers
 @import "../lib/bootstrap/scss/helpers";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "object-fit": (
+      responsive: true,
+      property: object-fit,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none,
+      ),
+    ),
+  )
+);
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../lib/bootstrap/scss/utilities/api";
@@ -52,7 +96,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "layout/footer";
 
 // 組件(Component)可重複使用的元件
-@import "components/block-items";
+@import "components/button";
 
 // 頁面(Pages) 每一個網頁特定且零碎的樣式
 @import "pages/home";

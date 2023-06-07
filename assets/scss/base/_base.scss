@@ -2,3 +2,36 @@ img {
   max-width: 100%;
   height: auto;
 }
+.display-1 {
+  font-weight: bolder;
+  @include media-breakpoint-down(sm) {
+    font-size: 3rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 10rem;
+  }
+}
+.section-my {
+  margin: 7.5rem 0;
+  @include media-breakpoint-up(xl) {
+    margin: 10rem 0;
+  }
+}
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-up(xl) {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+.section-describe {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+}
