@@ -16,8 +16,9 @@
 
   <body>
     <!-- header -->
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark border-bottom">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+      <div class="container border-bottom py-2">
         <a class="navbar-brand" href="./index.html">
           <img
             src="./assets/img/logo.png"
@@ -26,30 +27,69 @@
           />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">首頁</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">定價</a>
-            </li>
-          </ul>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark bg-black w-100 border-0"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <a class="navbar-brand" href="./index.html">
+                <img
+                  src="./assets/img/logo.png"
+                  alt="LOGO Image"
+                  class="d-inline-block"
+                />
+              </a>
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-lg-end flex-lg-grow-1 pe-lg-3"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >首頁</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./price.html">價錢</a>
+              </li>
+            </ul>
+          </div>
+          <div class="offcanvas-footer d-lg-none">
+            <div class="footer-bottom">
+              <p>AI工具王 © 2023</p>
+              <ul class="socia-media-wrapper list-unstyled list-inline mb-0">
+                <li class="list-inline-item me-4">Facebook</li>
+                <li class="list-inline-item me-4">Twitter</li>
+                <li class="list-inline-item">Instagram</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
     <!-- main -->
-    <main>
+    <main class="main-content">
       <!-- hero -->
       <section class="hero-section">
         <div class="container">
@@ -89,7 +129,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row g-3">
             <div class="col-md-4">
               <div class="service-item">
                 <div class="service-item_icon">
@@ -312,7 +352,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row g-3">
             <div class="col-md-4">
               <div class="sharing-item">
                 <div class="d-flex gap-1 mb-3">
@@ -444,12 +484,12 @@
                 <li><a class="dropdown-item" href="#">昊昊</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><h6 class="dropdown-header">所有類型</h6></li>
-                <li><a class="dropdown-item" href="#">篩選項目 1</a></li>
-                <li><a class="dropdown-item" href="#">篩選項目 2</a></li>
-                <li><a class="dropdown-item" href="#">篩選項目 3</a></li>
-                <li><a class="dropdown-item" href="#">篩選項目 4</a></li>
-                <li><a class="dropdown-item" href="#">篩選項目 5</a></li>
-                <li><a class="dropdown-item" href="#">篩選項目 6</a></li>
+                <li><a class="dropdown-item" href="#">問答服務</a></li>
+                <li><a class="dropdown-item" href="#">虛擬客服</a></li>
+                <li><a class="dropdown-item" href="#">生活應用</a></li>
+                <li><a class="dropdown-item" href="#">程式知識</a></li>
+                <li><a class="dropdown-item" href="#">翻譯助手</a></li>
+                <li><a class="dropdown-item" href="#">行銷文案</a></li>
               </ul>
             </div>
             <ul class="nav nav-pills order-1 order-lg-0">
@@ -462,22 +502,22 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 1</a>
+                <a class="nav-link rounded-pill" href="#">問答服務</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 2</a>
+                <a class="nav-link rounded-pill" href="#">虛擬客服</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 3</a>
+                <a class="nav-link rounded-pill" href="#">生活應用</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 4</a>
+                <a class="nav-link rounded-pill" href="#">程式知識</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 5</a>
+                <a class="nav-link rounded-pill" href="#">翻譯助手</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-pill" href="#">篩選項目 6</a>
+                <a class="nav-link rounded-pill" href="#">行銷文案</a>
               </li>
             </ul>
             <div class="dropdown">
@@ -499,8 +539,8 @@
             </div>
           </div>
 
-          <div class="row g-4">
-            <div class="col-12 col-md-4">
+          <div class="card-list row g-4">
+            <!-- <div class="col-12 col-md-4">
               <div class="card h-100">
                 <div class="card-img">
                   <img
@@ -697,7 +737,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <nav aria-label="Page navigation" class="pagination-wrap">
@@ -718,6 +758,56 @@
               </li>
             </ul>
           </nav>
+        </div>
+      </section>
+      <!-- action -->
+      <section class="action-section section-my text-center">
+        <div class="container">
+          <h3 class="d-sm-inline-block">現在就來建立</h3>
+          <h3 class="d-sm-inline-block">屬於你的服務吧</h3>
+          <button
+            type="button"
+            class="btn btn-outline-light d-flex align-items-center justify-content-center mx-auto mt-4 mt-xl-5 px-4"
+          >
+            開始使用<span class="material-symbols-outlined m-2">
+              north_east
+            </span>
+          </button>
+        </div>
+      </section>
+      <!-- footer -->
+      <section class="footer-section">
+        <div class="container">
+          <div class="footer-top">
+            <a class="navbar-brand" href="./index.html">
+              <img
+                src="./assets/img/logo.png"
+                alt="LOGO Image"
+                class="d-inline-block"
+              />
+            </a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link p-0">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a href="./price.html" class="nav-link p-0">定價</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom">
+            <p>AI工具王 © 2023</p>
+            <ul class="socia-media-wrapper list-unstyled list-inline mb-0">
+              <li class="list-inline-item me-4">Facebook</li>
+              <li class="list-inline-item me-4">Twitter</li>
+              <li class="list-inline-item">Instagram</li>
+            </ul>
+            <a href="#" class="top-btn"
+              >Back to top<span class="material-symbols-outlined ms-2">
+                arrow_upward
+              </span></a
+            >
+          </div>
         </div>
       </section>
     </main>

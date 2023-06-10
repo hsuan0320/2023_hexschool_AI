@@ -11029,6 +11029,10 @@ img {
   height: auto;
 }
 
+.main-content {
+  padding-top: 66px;
+}
+
 .display-1 {
   font-weight: bolder;
 }
@@ -11075,15 +11079,88 @@ img {
   }
 }
 
-.navbar-brand img {
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+.navbar .navbar-brand img {
   height: 24px;
 }
-@media (min-width: 1200px) {
+.navbar .nav-link {
+  --bs-nav-link-color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .offcanvas-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .nav-link {
+    text-align: center;
+    font-size: 5rem;
+  }
+}
+@media (min-width: 992px) {
   .navbar-brand img {
     height: 40px;
   }
 }
+.footer-section .nav-link {
+  color: #fff;
+  font-size: 3rem;
+}
+@media (max-width: 767.98px) {
+  .footer-section .navbar-brand {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-section .navbar-brand + .nav {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-section .nav-link {
+    font-size: 5rem;
+  }
+}
 
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #fff;
+}
+
+.footer-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #fff;
+  padding: 2rem 0;
+}
+
+.top-btn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+.top-btn:hover {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 5rem 0;
+  }
+  .footer-bottom {
+    flex-direction: row;
+  }
+}
 .btn-lg,
 .btn-group-lg > .btn {
   --bs-btn-padding-y: 1.25rem;
@@ -11141,14 +11218,6 @@ img {
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 .sharing-item {
   display: flex;
   flex-direction: column;
@@ -11250,18 +11319,12 @@ img {
   color: #525252;
   margin-bottom: 0;
 }
-.application-section .card .card-tag,
 .application-section .card .card-share {
   color: var(--black-color);
   text-decoration: none;
 }
-.application-section .card .card-tag:hover,
 .application-section .card .card-share:hover {
   color: #0d6efd;
-}
-.application-section .card:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .application-section .card:hover .card-img img {
   transform: scale(1.1);
@@ -11305,5 +11368,14 @@ img {
   }
   .application-section .pagination-wrap {
     margin-top: 2.5rem;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

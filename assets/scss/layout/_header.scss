@@ -1,8 +1,30 @@
-.navbar-brand {
-  img {
-    height: 24px;
+.navbar {
+  --bs-navbar-padding-y: 0;
+  .navbar-brand {
+    img {
+      height: 24px;
+    }
   }
-  @include media-breakpoint-up(xl) {
+  .nav-link {
+    --bs-nav-link-color: #fff;
+  }
+}
+@include media-breakpoint-down(lg) {
+  .navbar {
+    .offcanvas-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-link {
+      text-align: center;
+      font-size: 5rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-brand {
     img {
       height: 40px;
     }

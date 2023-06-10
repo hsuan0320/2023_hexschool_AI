@@ -2,6 +2,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.main-content {
+  padding-top: 66px;
+}
 .display-1 {
   font-weight: bolder;
   @include media-breakpoint-down(sm) {
