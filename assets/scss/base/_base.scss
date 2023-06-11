@@ -5,6 +5,23 @@ img {
 .main-content {
   padding-top: 66px;
 }
+.Heading01_Bold {
+  font-size: 2rem;
+  font-weight: bold;
+  @include media-breakpoint-up(xl) {
+    font-size: 3rem;
+  }
+}
+.Heading03_Regular {
+  font-size: 1rem;
+  @include media-breakpoint-up(xl) {
+    font-size: 2rem;
+  }
+}
+.Heading03_bold {
+  font-size: 2rem;
+  font-weight: bold;
+}
 .display-1 {
   font-weight: bolder;
   @include media-breakpoint-down(sm) {

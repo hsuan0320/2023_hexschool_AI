@@ -71,7 +71,7 @@ function renderWorks() {
   list.innerHTML = works; // 將作品 HTML 字符串渲染到列表元素中
 }
 
-// -----------------GoTop-----------------
+// GoTop
 document.addEventListener("DOMContentLoaded", function () {
   var topBtn = document.querySelector(".top-btn");
   topBtn.addEventListener("click", function (event) {
@@ -80,5 +80,22 @@ document.addEventListener("DOMContentLoaded", function () {
       top: 0,
       behavior: "smooth",
     });
+  });
+});
+
+// accordion
+var accordionButtons = document.querySelectorAll(".accordion-button");
+accordionButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var accordionItem = this.closest(".accordion-item");
+    var icon = accordionItem.querySelector(".material-symbols-outlined");
+    var isExpanded = this.getAttribute("aria-expanded");
+
+    accordionItem.classList.toggle("active");
+    if (isExpanded === "false") {
+      icon.innerHTML = "add";
+    } else {
+      icon.innerHTML = "remove";
+    }
   });
 });

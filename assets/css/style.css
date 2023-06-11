@@ -11033,6 +11033,30 @@ img {
   padding-top: 66px;
 }
 
+.Heading01_Bold {
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (min-width: 1200px) {
+  .Heading01_Bold {
+    font-size: 3rem;
+  }
+}
+
+.Heading03_Regular {
+  font-size: 1rem;
+}
+@media (min-width: 1200px) {
+  .Heading03_Regular {
+    font-size: 2rem;
+  }
+}
+
+.Heading03_bold {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .display-1 {
   font-weight: bolder;
 }
@@ -11324,10 +11348,13 @@ img {
   background-color: rgb(242, 242, 242);
 }
 .application-section .card {
+  --bs-card-inner-border-radius: calc(1rem - 1px);
   --bs-card-border-radius: 1rem;
   transition: transform 0.25s ease-in-out;
 }
 .application-section .card .card-img {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   overflow: hidden;
 }
 .application-section .card .card-img img {
@@ -11434,4 +11461,49 @@ img {
   to {
     transform: translateX(-100%);
   }
+}
+.price-section .card {
+  --bs-card-border-color: rgba(82, 82, 82, 1);
+  transition: all 0.3s ease-in-out;
+  min-height: 240px;
+}
+.price-section .card:hover {
+  --bs-card-border-color: #fff;
+}
+.price-section .card-text {
+  color: rgb(242, 242, 242);
+}
+
+.specification-section .list-group-item {
+  --bs-list-group-color: #fff;
+  --bs-list-group-bg: #000;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgb(82, 82, 82);
+  margin-bottom: 1.5rem;
+}
+.specification-section .list-group-item:last-child {
+  border-bottom-width: 1px;
+}
+
+.question-section .accordion {
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-active-bg: transparent;
+}
+.question-section .accordion-item {
+  border: 1px solid rgb(82, 82, 82);
+  margin-bottom: 1rem;
+}
+.question-section .accordion-item.active {
+  border: 2px solid #fff;
+}
+.question-section .accordion-item,
+.question-section .accordion-button,
+.question-section .accordion-item:first-of-type .accordion-button {
+  border-radius: 1rem;
+}
+.question-section .accordion-button::after, .question-section .accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+.question-section .accordion-button:not(.collapsed), .question-section .accordion-button:focus {
+  box-shadow: none;
 }

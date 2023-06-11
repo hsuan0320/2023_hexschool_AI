@@ -1,0 +1,53 @@
+.price-section {
+  .card {
+    --bs-card-border-color: rgba(82, 82, 82, 1);
+    transition: all 0.3s ease-in-out;
+    min-height: 240px;
+    &:hover {
+      --bs-card-border-color: #fff;
+    }
+  }
+  .card-text {
+    color: rgba(242, 242, 242, 1);
+  }
+}
+.specification-section {
+  .list-group-item {
+    --bs-list-group-color: #fff;
+    --bs-list-group-bg: #000;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(82, 82, 82, 1);
+    margin-bottom: 1.5rem;
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+  }
+}
+.question-section {
+  .accordion {
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-active-bg: transparent;
+  }
+  .accordion-item {
+    border: 1px solid rgba(82, 82, 82, 1);
+    margin-bottom: 1rem;
+    &.active {
+      border: 2px solid #fff;
+    }
+  }
+  .accordion-item,
+  .accordion-button,
+  .accordion-item:first-of-type .accordion-button {
+    border-radius: 1rem;
+  }
+  .accordion-button {
+    &::after,
+    &:not(.collapsed)::after {
+      background-image: none;
+    }
+    &:not(.collapsed),
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

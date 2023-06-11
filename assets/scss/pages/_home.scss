@@ -152,9 +152,12 @@
     }
   }
   .card {
+    --bs-card-inner-border-radius: calc(1rem - 1px);
     --bs-card-border-radius: 1rem;
     transition: transform 0.25s ease-in-out;
     .card-img {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
       overflow: hidden;
       img {
         transition: transform 0.25s ease-in-out;
